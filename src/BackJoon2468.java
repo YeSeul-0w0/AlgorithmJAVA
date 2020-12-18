@@ -11,7 +11,7 @@ import java.util.TreeMap;
 public class BackJoon2468 {
 
     static int[][] zone, working;
-    static int size, max, min;
+    static int size, max;
     static Boolean[][] visited;
     static ArrayList<Integer> numList;
 
