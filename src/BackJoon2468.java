@@ -18,7 +18,7 @@ public class BackJoon2468 {
     public static Boolean ZoneNum(int x, int y){
         if (x<=-1 || x>=size || y<=-1|| y>=size)
             return false;
-        if (zone[x][y]!=0 && visited[x][y]==false){
+        if (working[x][y]!=0 && visited[x][y]==false){
             visited[x][y]=true;
             ZoneNum(x-1,y);
             ZoneNum(x+1,y);
