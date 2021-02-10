@@ -19,7 +19,7 @@ public class BackJoon9184 {
             return dp[a][b][c]=w(a-1,b,c)+w(a-1,b-1,c)+w(a-1,b,c-1)-w(a-1,b-1,c-1);
 
     }
-
+// 50 50 50
 
     public static void main(String[] args){
         Scanner scan=new Scanner(System.in);
