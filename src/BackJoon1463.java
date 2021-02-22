@@ -11,7 +11,7 @@ public class BackJoon1463 {
         d[1]=0;
 
         for(int i=2; i<=N; i++){ // i==X
-            d[i]=d[i-1]+1;
+            d[i]=d[i-1]+1; // dp[2]=dp[1]+1
             if(i%2==0){
                 d[i]=Math.min(d[i],d[i/2]+1);
             }
