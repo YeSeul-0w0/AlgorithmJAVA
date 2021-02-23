@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BackJoon2670 {
+public class _2670 {
 
     static int N;
     static double[] num_list,dp;

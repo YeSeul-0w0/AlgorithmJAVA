@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BackJoon9184 {
+public class _9184 {
     public static int A,B,C;
     public static int[][][] dp=new int[21][21][21];
 

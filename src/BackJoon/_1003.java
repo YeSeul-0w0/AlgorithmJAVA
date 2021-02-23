@@ -1,6 +1,8 @@
+package BackJoon;
+
 import java.util.Scanner;
 
-public class BackJoon1003 {
+public class _1003 {
 
     public static int[][] fibonacci=new int[41][2];
     public static int N;

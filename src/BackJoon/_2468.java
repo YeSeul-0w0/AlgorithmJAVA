@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.StringTokenizer;
 import java.util.TreeMap;
 
-public class BackJoon2468 {
+public class _2468 {
 
     static int[][] zone, working;
     static int size, max;

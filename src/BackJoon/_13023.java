@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BackJoon13023 {
+public class _13023 {
     static int people;
     static int total;
 
