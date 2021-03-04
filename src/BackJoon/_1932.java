@@ -1,3 +1,5 @@
+package BackJoon;
+
 import java.util.Scanner;
 
 public class _1932 {
