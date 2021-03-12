@@ -36,9 +36,9 @@ public class _9935 {
 
         for(int i=0; i<str_stack.size(); i++){
                 sb.append(str_stack.get(i));
-            }
+        }
 
-        System.out.println(sb.length()>0 ? sb.toString() : "FRULA");
+        System.out.println(sb.length()>0 ? sb.toString() : " ");
 
 
     }

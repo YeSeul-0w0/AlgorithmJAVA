@@ -1,6 +1,5 @@
 package BackJoon;
 
-
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -50,6 +49,7 @@ public class _12789 {
                 }
 
             }
+
             else{
                 if(!temp.empty()){
                     int check=temp.peek();
@@ -65,11 +65,7 @@ public class _12789 {
                     break;
                 }
             }
-
-
-
         }
-
 
         if(N==line.size()) System.out.println("Nice");
         else System.out.println("Sad");
