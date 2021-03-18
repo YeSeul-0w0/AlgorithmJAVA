@@ -20,14 +20,12 @@ public class _15828 {
             check=Integer.parseInt(br.readLine());
             if(check==0){
                 queue.poll();
-            }
-            else if(check>0){
-                if(queue.size()<que_size) {
-                    queue.offer(check);
-                }
+
             }
             else{
-                break;
+                if(check>0 && queue.size()<que_size) {
+                    queue.offer(check);
+                }
             }
         }
         if(queue.isEmpty()){
@@ -36,7 +34,7 @@ public class _15828 {
         }
         else{
             while (!queue.isEmpty()){
-                System.out.println(queue.poll());
+                System.out.print(queue.poll()+" ");
             }
         }
 
