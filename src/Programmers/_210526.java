@@ -16,23 +16,29 @@ public class _210526 {
             int value = Integer.parseInt(st.nextToken());
             System.out.println(check+" "+value);
 
-            if (minQue.size() < 1 && check.equals("D"))
-                continue;
+            if (check.equals("D")){
+                if(minQue.size() < 1 && maxQue.size()<1){
+                    continue;
+                }
+                else{
+                    if(value<0){
+                        int min=minQue.poll();
+                        maxQue.remove(min);
+                    }
+                    else{
+                        int max=maxQue.poll();
+                        minQue.remove(max);
+                    }
+                }
+            }
 
-            if (check.equals("I")) {
+            else {
                 minQue.offer(value);
                 maxQue.offer(value);
                 continue;
             }
 
-            if(value < 0) {
-                int min = minQue.poll();
-                maxQue.remove(min);
-                continue;
-            }
 
-            int max = maxQue.poll();
-            minQue.remove(max);
         }
 
         if(minQue.size() > 0 ) {
