@@ -27,7 +27,6 @@ public class _1707 {
 
             for(Integer i:graph.get(check)){
                 if (color[check]==color[i]){
-
                     answer="NO";
                     return false;
                 }
