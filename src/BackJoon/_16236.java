@@ -40,7 +40,7 @@ public class _16236 {
                                 X_min=nx;
                                 Y_min=ny;
                             }
-                            else if(D_min == dist[nx][ny]){ //최서 거리값이 현재의 위치와 같으면
+                            else if(D_min == dist[nx][ny]){ //최저 거리값이 현재의 위치와 같으면
                                 if(X_min>nx){ // 위쪽이 우선권을 가지니 위쪽부터
                                     X_min=nx;
                                     Y_min=ny;
