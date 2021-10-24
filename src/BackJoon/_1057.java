@@ -32,22 +32,22 @@ public class _1057 {
                 }
                 else if(p1==jimin || p2==jimin){
                     if (p1==jimin){
-                        tournament.remove(Integer.valueOf(p2));
+                        tournament.remove(position+1);
                     }
                     else{
-                        tournament.remove(Integer.valueOf(p1));
+                        tournament.remove(position);
                     }
                 }
                 else if(p1==hansu || p2==hansu){
                     if(p1==hansu){
-                        tournament.remove(Integer.valueOf(p2));
+                        tournament.remove(position+1);
                     }
                     else{
-                        tournament.remove(Integer.valueOf(p1));
+                        tournament.remove(position);
                     }
                 }
                 else{
-                    tournament.remove(Integer.valueOf(p1));
+                    tournament.remove(position);
                 }
 
                 position++;
