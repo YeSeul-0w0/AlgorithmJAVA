@@ -13,7 +13,7 @@ public class _2961 {
 
     public static void testing(int index, int p, int h){
         if(index==N){
-            if(h!=0){ // 아니 이 조건 없으면 안되는 이유가 뭐임?
+            if(h!=0){ // 처음 h가 0인데, 이게 유지된체로 index만 늘어나는 경우가 생김
                 result=Math.min(result,Math.abs(p-h));
             }
             return;
