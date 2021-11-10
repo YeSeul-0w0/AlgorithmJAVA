@@ -7,72 +7,77 @@ import java.util.StringTokenizer;
 
 public class _2072 {
 
+    public static int[][] board=new int[21][21];
+    public static Boolean checking(int x, int y, int color){
+        int c1=0;
+        for (int i = 0; board[x+i][y]==color; i++) {
+                c1++;
+        }
+        for (int i = 1; board[x-i][y]==color; i++) {
+                c1++;
+        }
+        if (c1==5){
+            return true;
+        }
+
+        int c2=0;
+        for (int i= 0; board[x][y+i]==color; i++) {
+                c2++;
+        }
+        for (int i = 1; board[x][y-i]==color; i++) {
+                c2++;
+        }
+        if(c2==5){
+            return true;
+        }
+
+        int c3=0;
+        for (int i = 0; board[x+i][y+i]==color; i++) {
+                c3++;
+        }
+        for (int i = 1; board[x-i][y-i]==color; i++) {
+                c3++;
+
+        }
+        if(c3==5){
+            return true;
+        }
+
+        int c4=0;
+        for (int i = 0; board[x-i][y+i]==color; i++) {
+                c4++;
+        }
+        for (int i = 1; board[x+i][y-i]==color; i++) {
+                c4++;
+        }
+        if(c4==5){
+            return true;
+        }
+
+        return false;
+    }
+
     public static void main(String[] args) throws IOException {
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         int N=Integer.parseInt(br.readLine());
 
-        int[][] board=new int[20][20];
-        int point=0;
+        int point=-1;
         for (int i = 0; i < N; i++) {
-            StringTokenizer st=new StringTokenizer(br.readLine());
-            int x=Integer.parseInt(st.nextToken());
-            int y=Integer.parseInt(st.nextToken());
-            if(i%2==0){
-                board[x][y]=2; //백=2
-            }
-            else{
-                board[x][y]=1; //흑=1
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int x = Integer.parseInt(st.nextToken());
+            int y = Integer.parseInt(st.nextToken());
+            if (i % 2 == 0) {
+                board[x][y] = 2; //백=2
+            } else {
+                board[x][y] = 1; //흑=1
             }
 
-            if(i>=8){
-                int r_count=1; // 가로 카운트 B
-                int c_count=1; // 세로 카운트 C
-                int d_count=1; // 대각선 카운트
-                int max_r=0;
-                int max_c=0;
-                int max_d=0;
-                for (int a = 1; a < 20; a++) {
-                    if(a+1<15){
-                        if(board[a][a]!=0 && board[a][a]==board[a+1][a+1]){
-                            d_count++;
-                        }
-                        else{
-                            max_d=Math.max(d_count, max_d);
-                            d_count=1;
-                        }
-                    }
-
-                    for (int b = 1; b < 19; b++) {
-                        if(board[a][b]!=0 && board[a][b]==board[a][b+1]){
-                            r_count++;
-                        }
-                        else{
-                            max_r=Math.max(r_count,max_r);
-                            r_count=1;
-                        }
-                    }
-                    for (int c = 1; c < 19; c++) {
-                        if(board[c][a]!=0 && board[c][a]==board[c+1][a]){
-                            c_count++;
-                        }
-                        else{
-                            max_c=Math.max(c_count,max_c);
-                            c_count=1;
-                        }
-                    }
-                }
-                if(max_d==5||max_r==5 || max_c==5){
-                    point=i+1;
-                    break;
-                }
+            if(checking(x,y,board[x][y])){
+                point=i+1;
+                break;
             }
-        }
 
-        if(point==0){
-            System.out.println(-1);
         }
-        else{
-            System.out.println(point);
-        }
+        System.out.println(point);
     }
 }
