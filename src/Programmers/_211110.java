@@ -1,11 +1,9 @@
 package Programmers;
 
-import java.util.LinkedList;
 import java.util.Stack;
 
 public class _211110 {
     public String solution(int n, int k, String[] cmd) {
-
 
         Stack<Integer> removeInfo=new Stack<>();
         int len=n;
@@ -38,10 +36,8 @@ public class _211110 {
             strBuild.insert(removeInfo.pop().intValue(), "X");
         }
 
-
         String answer = strBuild.toString();
 
-//        System.out.println(answer);
         return answer;
     }
 
