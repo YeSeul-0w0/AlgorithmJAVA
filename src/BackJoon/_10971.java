@@ -46,7 +46,7 @@ public class _10971 {
             visited=new boolean[N+1];
             visited[i]=true;
             for (int j = 1; j < N+1; j++) {
-                if(!visited[j]){
+                if(!visited[j] && city[i][j]>0){
                     visited[j]=true;
                     path(i, j,city[i][j],2);
                 }
