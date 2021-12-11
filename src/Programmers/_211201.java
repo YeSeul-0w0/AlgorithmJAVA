@@ -16,12 +16,12 @@ public class _211201 {
 
         // 0: 세로 , 1 : 가로
         for (int i = 1; i < m; i++) {
-            if(cityMap[i][0]!=1){
+            if(cityMap[i][0]!=1){ // 최단거리로 이동하는 방법의 수 구하기
                 dp[i][0][0]=dp[i-1][0][0];
             }
         }
         for (int j = 1; j < n; j++) {
-            if(cityMap[0][j]!=1){
+            if(cityMap[0][j]!=1){ // 최단거리로 이동하는 방법의 수 구하기
                 dp[0][j][1]=dp[0][j-1][1];
             }
         }
