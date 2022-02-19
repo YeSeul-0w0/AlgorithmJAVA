@@ -22,6 +22,8 @@ public class _16194 {
         for (int i = 1; i <= N; i++) {
             dp[i]=card[i];
             for (int j = 1; j <= i ; j++) {
+                // 2장 사고 싶음 = 1장 2개 or 2장 1개
+                // 3장 사고 싶음 = 1장 * 3개
                 dp[i]=Math.min(dp[i],dp[i-j]+card[j]);
             }
         }
