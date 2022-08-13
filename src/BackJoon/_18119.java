@@ -44,7 +44,7 @@ public class _18119 {
             int knowCount = 0;
 
             for (int j = 0; j < N; j++) {
-                if ((allAlphabet & binWord[j]) >= binWord[j]){
+                if ((allAlphabet & binWord[j]) == binWord[j]){
                     knowCount++;
                 }
             }
