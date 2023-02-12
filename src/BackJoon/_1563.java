@@ -27,7 +27,7 @@ public class _1563 {
             int attend = (check(day+1, late, 0) + check(day+1, late+1, 0) + check(day+1,late,absent+1)) % mod;
             // check(day+1, late, 0) = 정상 출결 결석 초기화
             // 왜 결석 초기화? 연속으로 3번인 경우를 세니까. 결석이 아닌 다른 출결을 할 경우 초기화
-            // check(day+1, late+1, 0) = 지각, 결석 초기화  (연속으ㄹ
+            // check(day+1, late+1, 0) = 지각, 결석 초기화
             // check(day+1, late, absent+1) = 결석
             dp[day][late][absent] = attend;
             return attend;
